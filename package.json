@@ -8,6 +8,8 @@
         "build": "vue-cli-service build"
     },
     "dependencies": {
+        "@babel/eslint-parser": "^7.19.1",
+        "@vue/cli-plugin-babel": "^5.0.8",
         "autoprefixer": "^9.8.6",
         "axios": "^0.21.4",
         "bootstrap": "4.6.0",
@@ -29,5 +31,4 @@
         "type": "git",
         "url": "https://github.com/Semi-dios/template-project-vue-stylelint.git"
     }
-
 }
