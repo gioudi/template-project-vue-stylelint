@@ -10,11 +10,16 @@
     "dependencies": {
         "@babel/eslint-parser": "^7.19.1",
         "@vue/cli-plugin-babel": "^5.0.8",
+        "@vue/cli-plugin-eslint": "^5.0.8",
+        "@vue/eslint-config-airbnb": "^7.0.0",
         "autoprefixer": "^9.8.6",
         "axios": "^0.21.4",
         "bootstrap": "4.6.0",
         "core-js": "^3.15.2",
         "crypto-js": "^4.1.1",
+        "eslint": "^8.23.1",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-vue": "^9.5.1",
         "jquery": "~3.6.0",
         "popper.js": "^1.16.1",
         "vue": "^2.6.14"
