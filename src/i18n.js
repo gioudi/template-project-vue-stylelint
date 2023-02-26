@@ -5,10 +5,12 @@ Vue.use(VueI18n);
 
 const messages = {
   en: {
-    example: 'Hello',
+    example: 'Hello World',
+
   },
   es: {
-    example: 'Hola',
+    example: 'Hola Mundo',
+
   },
 };
 
