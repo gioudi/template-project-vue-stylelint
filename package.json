@@ -7,7 +7,18 @@
         "serve": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
         "build": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
         "lint": "vue-cli-service lint",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "test:unit": "vue-cli-service test:unit"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npx validate-branch-name lint-staged",
+            "pre-push": "npm run test:unit"
+        }
+    },
+    "validate-branch-name": {
+        "pattern": "^(master|main|develop){1}$|^(feature|fix|hotfix|release)/.+$",
+        "errorMsg": "your own error message"
     },
     "dependencies": {
         "@babel/eslint-parser": "^7.19.1",
@@ -23,17 +34,22 @@
         "jquery": "~3.6.0",
         "popper.js": "^1.16.1",
         "stylelint-config-twbs-bootstrap": "^6.0.0",
+        "validate-branch-name": "^1.3.0",
         "vue": "^2.6.14",
         "vue-i18n": "^8.28.2"
     },
     "devDependencies": {
+        "@vue/cli-plugin-unit-jest": "^5.0.8",
         "@vue/cli-service": "~4.5.13",
+        "@vue/test-utils": "^1.3.4",
+        "@vue/vue2-jest": "^27.0.0",
         "axe-core": "^4.3.1",
         "eslint": "^8.36.0",
         "eslint-plugin-vue": "^9.9.0",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.0",
-        "vue-axe": "^2.4.4"
+        "vue-axe": "^2.4.4",
+        "vue-jest": "^3.0.7"
     },
     "contributors": [
         "xxxxxxx <xxxxx@xxxx.com>"
